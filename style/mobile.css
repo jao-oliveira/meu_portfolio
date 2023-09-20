@@ -1,0 +1,284 @@
+@media (max-width:765px){
+    .navbar-menu{
+        display: none;
+    }
+    
+    .logo h2{
+        font-size: 28px;
+        margin-left: 1.5rem;
+    }
+
+
+
+    .logo span{
+        color:var(--color-font-2);
+        font-size: 28px;
+        display: none;
+     }
+
+     .logo h2::after{
+        content: "";
+        height: 38px;
+        width: 2px;
+        right: -8px;
+        top: 0px;
+        
+     }
+
+
+    .navbar{
+        position: relative;
+    }
+
+
+    .navbar-mobile{
+        display: flex;
+        position: relative;
+        top: 0;
+        width: 100%;
+        padding: 1rem 2%;
+        z-index: 10;
+        position: fixed;
+   
+    }
+
+
+    
+
+
+    .icon{
+        display: block;
+        position: absolute;
+        right: 50px;
+        top: 45%;
+        fill: var(--color-icons-1);
+        cursor: pointer;
+    }  
+    
+
+
+    .drop-down-menu{
+       display: none;
+
+       position: absolute;
+       width: 300%;
+       top: 120%;
+       right: 10%;
+       padding: 20px;
+       line-height: 30px;
+       background-color: rgba(70, 70, 70, 0.678);
+       text-align: center;
+       border-radius: 10px;
+       box-shadow:var(--color-icons-1) 0px 7px 29px 0px;
+       filter: blur(2);
+       transition: 1s ease-in-out;
+    
+    }
+
+    .drop-down-menu ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+    .drop-down-menu li{
+        list-style: none;
+        margin-bottom: 1rem ;
+     
+    }
+
+    .drop-down-menu a{
+        text-decoration: none;
+        color: var(--color-font-1);
+        font-weight: 300;
+    }
+
+    /*class que abre o menu mobile*/
+    .open{
+        display: block;
+    }
+
+
+
+
+    /*sobre*/
+
+
+    .header__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
+    }
+
+    .header__left{
+        padding: 0;
+    }
+
+    .header__left h1{
+        font-size: 26pxs;
+    }
+
+    .header__left h1,
+    .header__left p{
+        justify-content: center;
+        text-align: center;
+    }
+
+    #imagem{
+        justify-content: center;
+        top: 50%;
+        width: 150px;
+        height: 150px;
+    }
+
+    .btn-primary{
+        margin-top: 8rem;
+      }
+    
+    /*about*/
+    .about{
+        padding: 2%;
+    }
+    .about__left{
+        width: 100%;
+        padding: 5% 2%;
+    }
+    
+    .about__left h2{
+        text-align: center;
+        font-size: 32px;
+    }
+
+    /*skils*/
+
+    
+.galeria{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 5px;
+    width: 100%;
+    padding:  2% 0;
+    align-items: center;
+    justify-content: start;
+ 
+    
+ }
+
+
+    .skils__title h3{
+        font-size: 26px;
+    }
+
+    .box__skils{
+    border: 1px solid var(--color-icons-1);
+    width: 180px;
+    height: 320px   ;
+    margin: 5% 2%;
+    line-height: 25px;
+    
+ }
+
+   
+    .box__skils svg{
+    width: 50px;
+    height: 50px;
+    fill: var(--color-icons-1);
+    }
+
+    .box__skils h4{
+        font-size: 22px;
+        color: var(--color-font-1);
+        margin-bottom: 20px;
+     }
+
+
+
+
+    /*Porjetos*/
+
+    
+    .project__box {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        
+    }
+
+    .project__imgs{
+        padding: 5rem 0;
+    }
+
+    .project__description,
+    .project__description h2,
+    .project__description p{
+        text-align: center;
+        padding: 0 2%;
+        margin-bottom: 20px;
+    }
+
+    .project__description a{
+        padding: 3px 5px;
+        margin-right: 0;
+    }
+
+}
+
+
+@media (max-width:350px){
+
+    #imagem{
+        justify-content: center;
+        top: 50%;
+        width: 100px;
+        height: 100px;
+    }
+
+
+    .galeria{
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 10px;
+        width: 100%;
+        padding:  3% 2%;
+        align-items: center;
+        
+     
+        
+     }
+
+    .skils__title h3{
+        font-size: 22px;
+    }
+
+
+    div .primeiro_skil{
+        scale: 1;
+      
+      }
+
+    .box__skils{
+    width: 170px;
+    border: 1px solid var(--color-icons-1);
+    margin: 5% 3%;
+    line-height: 20px;
+    
+ }
+
+   
+    .box__skils svg{
+    width: 50px;
+    height: 50px;
+    fill: var(--color-icons-1);
+    }
+
+    .box__skils h4{
+        font-size: 22px;
+        color: var(--color-font-1);
+        margin-bottom: 20px;
+     }
+
+     .btn-primary{
+        margin-top: 8rem;
+      }
+}

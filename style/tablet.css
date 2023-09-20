@@ -1,0 +1,60 @@
+@media (max-width: 1100px){
+
+    /*navbar*/
+
+    .logo h2{
+        margin-left: 5rem;
+    } 
+
+     
+     
+     #imagem{
+        width: 200px;
+        height: 200px;
+        padding: 0;
+        fill: var(--color-icons-1);
+        /*animation: tranlação-react 15s linear infinite;*/
+        position: relative;
+        
+      
+      }
+
+
+
+      div .primeiro_skil{
+        /* position: absolute;*/
+         display: block;
+         
+       
+       }
+
+
+
+      .box__skils{
+        
+     }
+
+     .arrow__left{
+        position: absolute;
+        cursor: pointer;
+        left: -5%;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 45px;
+      }
+     
+      .arrow__rigth{
+        position: absolute;
+        cursor: pointer;
+        right: -5%;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 45px;
+      }
+
+
+      .drop-down-menu{
+        display: none;
+    }
+     
+}
