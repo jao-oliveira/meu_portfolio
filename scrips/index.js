@@ -1,55 +1,65 @@
 
 
 //slide de skils
-const controls = document.querySelectorAll('.control')
-const controlBox = document.querySelectorAll('.contro_box')
-let primeiroItem = null
+
+const controls = document.querySelectorAll('.control');
 const items = document.querySelectorAll('.box__skils');
-const maxItems  = items.length
+let primeiroItem = null;
+const maxItems = items.length;
+
+// Função para selecionar um item
+function selectItem(index) {
+  // Remove a classe 'primeiro_skil' de todos os itens
+  items.forEach((item) => {
+    item.classList.remove('primeiro_skil');
+  });
+
+  // Adiciona a classe 'primeiro_skil' ao item selecionado
+  items[index].classList.add('primeiro_skil');
 
 
-controls.forEach((control)=>{
-    control.addEventListener("click", ()=>{
-        console.log('control clicado');
+  
+}
 
-        //botao esquerdo
-        const isLeft = 
-        control.classList.contains('arrow__left');
-        console.log('control clicado esquerdo', isLeft);
+// Adiciona um ouvinte de eventos de clique a cada item
+items.forEach((item, index) => {
+  item.addEventListener('click', () => {
+    // Seleciona o item clicado
+    primeiroItem = index;
+    selectItem(primeiroItem);
 
-        //botao direito
+    items[primeiroItem].scrollIntoView({
+        inline: 'center',
+        behavior: 'smooth',
+        block: 'nearest',
+      });
+  });
+});
 
-        if(isLeft){
-            primeiroItem -= 1
-            console.log(primeiroItem)
-        }else{
-            primeiroItem +=1
-            console.log(primeiroItem)
-        }
+controls.forEach((control) => {
+  control.addEventListener('click', () => {
+    // Verifica se o controle clicado é o da esquerda
+    const isLeft = control.classList.contains('arrow__left');
 
-        if(primeiroItem >= maxItems){
-            primeiroItem = 0
-        }
+    // Atualiza o índice do item atual com base na direção
+    if (isLeft) {
+      primeiroItem = (primeiroItem - 1 + maxItems) % maxItems;
+    } else {
+      primeiroItem = (primeiroItem + 1) % maxItems;
+    }
 
-        if(primeiroItem < 0){
-            primeiroItem = maxItems -1
-        }
+    // Seleciona o item atual
+    selectItem(primeiroItem);
 
-        items.forEach( item =>
-            item.classList.remove('primeiro_skil'));
-            
-            items[primeiroItem].scrollIntoView({
-                inline: "center",
-                behavior: "smooth",
-                block: "nearest"
+    // Rola para o item atual de forma suave
+    items[primeiroItem].scrollIntoView({
+      inline: 'center',
+      behavior: 'smooth',
+      block: 'nearest',
+    });
+  });
+});
 
-            })
-
-            items[primeiroItem].classList.add('primeiro_skil')
-       
-     
-    })
-})
 
 
 

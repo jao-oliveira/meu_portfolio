@@ -222,6 +222,20 @@
         margin-right: 0;
     }
 
+
+    /*contato*/
+    .formulario{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+     }
+     
+     .form-contact{
+        text-align: left;
+        width: 100%;
+        margin-bottom: 3rem;
+     }
+
 }
 
 
@@ -281,4 +295,13 @@
      .btn-primary{
         margin-top: 8rem;
       }
+
+
+      /*contato*/
+
+      .formulario{
+        display: flex;
+        flex-direction: column;
+     }
+
 }
