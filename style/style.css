@@ -4,12 +4,12 @@
    --color-background-1:#0a0708;
    --color-background-2:#0e0e0e;
    --color-font-1:#ededed;
-   --color-font-2:#e3003d;
-   --color-icons-1:#e3003d;
-   --color-animation-border-1:#e3003d;
+   --color-font-2:#61dafb;
+   --color-icons-1:#5ee2ff;
+   --color-animation-border-1:#5ee2ff;
    --color-box-shadow-1:rgba(121, 121, 136, 0.2) 0px 3px 5px 0px;
    --color-text-shadow: rgb(255, 255, 255) 0.1em 0.1em 0.3em;
-   --color-text-shadow-1: #e3003d 0.1em 0.1em 0.5em;
+   --color-text-shadow-1: #5ee2ff 0.1em 0.1em 0.5em;
 }
 
 
@@ -149,7 +149,7 @@ span{
 .navbar__links a::after{
    content: "";
    width: 0%;
-   height: 1px;
+   height: 0.5px;
    position: absolute;
    bottom: 0;
    left: 0;
@@ -200,12 +200,13 @@ main{
     box-sizing: border-box;
     text-align: center;
     justify-content: center;
+    line-height: 28px;
  }
 
  .header__left h1{ 
     font-size: 32px;
     color:var(--color-font-1);
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
     text-align: left;
  }
  .header__left span{
@@ -221,8 +222,13 @@ main{
  }
 
  .header-rigth{
-   background: radial-gradient( #ff00446b, #ff306757,#0e0e0e86, #0e0e0e);
+   background: radial-gradient( #5ee2ff83, #6ce4ff57,#0e0e0e86, #0e0e0e);
    position: relative;
+}
+
+.icones-redes-header{
+   display: flex;
+   gap: 10px;
 }
 
 
@@ -253,7 +259,7 @@ main{
    content: "";
    width: 0%;
    height: 2px;
-   background-color:#e3003d;
+   background-color:var(--color-icons-1);
    position: absolute;
    bottom: -5px;
    left: 50%;
@@ -405,7 +411,6 @@ div .primeiro_skil{
   opacity: 100%;
   transition: .5s cubic-bezier(.17,.67,.55,1.43);
   scale: 1.05;
-
 }
 
 .box__skils{
@@ -420,7 +425,6 @@ div .primeiro_skil{
    flex-shrink: 0;
    border: 1px solid var(--color-icons-1);
    gap:5px;
-
 }
 
 
@@ -594,6 +598,53 @@ div .primeiro_skil{
 .form-contact input[type="submit"]:hover{
    box-shadow:var(--color-icons-1) -1px 0px 3px 2px; ;
 }
+
+.icones-redes{
+   display: flex;
+   gap: 10px;
+}
+
+#icon-redes{
+   width: 22px;
+   height: 22px;
+   cursor: pointer;
+   fill: var(--color-font-1);
+   background-color: var(--color-background-1);
+  
+   border-radius: 5px;
+   padding: 5px;
+   transition: 0.5s ease-out;
+  
+}
+
+#icon-redes:hover {
+   fill: var(--color-icons-1);
+   
+}
+
+#icon-redes-git{
+   fill: var(--color-font-1);
+   transition: 0.5s ease-out;
+}
+
+
+#icon-redes-git:hover{
+   fill: var(--color-icons-1);
+}
+
+/*roda pe*/
+
+.rodape{
+   background-color:#0e0e0e;
+   color: var(--color-font-1);
+   padding: 30px 30px;
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 12px;
+}
+
 
 
 
