@@ -1,5 +1,5 @@
 @media (max-width:765px){
-    .navbar-menu{
+    .navbar-menu ul li:not(:last-child) {
         display: none;
     }
     
@@ -42,7 +42,35 @@
    
     }
 
+    .togle-mode{
+        position: absolute;
+        right: 120px;
+        bottom :44.5%;
 
+        display: block !important;
+        
+    }    
+    .bi 
+    {
+      font-size: 18px;
+    }
+    
+    .bi-moon-stars{
+       color: var(--color-font-1);
+    }
+    
+    .bi-brightness-high{
+       color: var(--color-font-1);
+    }
+    
+    
+    .bi-brightness-high:hover{
+       color: var(--color-icons-1);
+    }
+    
+    .sumir{
+       display: none;
+    }
     
 
 
@@ -50,7 +78,7 @@
         display: block;
         position: absolute;
         right: 50px;
-        top: 45%;
+        top: 55%;
         fill: var(--color-icons-1);
         cursor: pointer;
     }  
@@ -132,8 +160,8 @@
 
     .icones-redes-header{
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
         gap: 10px;
         margin-bottom: 1.1rem;
      }
@@ -257,6 +285,15 @@
         width: 100%;
         margin-bottom: 3rem;
      }
+
+     /*redes*/
+
+     .redes{
+        width: 100%;
+        text-align: left;
+        padding: 0;
+     }
+     
 
 }
 

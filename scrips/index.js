@@ -1,3 +1,36 @@
+//dark-mode white-mode
+const btn_dark = document.querySelector('#darkmod');
+const themeSytem = localStorage.getItem('themeSystem') || "light"
+
+btn_dark.addEventListener('click', ()=>{
+    let oldTheme =  localStorage.getItem('themeSystem') || "light";
+    let newTheme = oldTheme == "light" ? "dark" : "light" 
+
+    localStorage.setItem("themeSystem", newTheme);
+    defineCurrentTheme(newTheme)
+})
+
+
+function defineCurrentTheme(theme) {
+  const darkSvg = document.querySelector('.bi-moon-stars');
+  const lightSvg = document.querySelector('.bi-brightness-high');
+
+  document.documentElement.setAttribute("data-theme", theme);
+
+  if (theme === 'light') {
+    darkSvg.classList.add('sumir');
+    lightSvg.classList.remove('sumir');
+  } else {
+    darkSvg.classList.remove('sumir');
+    lightSvg.classList.add('sumir');
+  }
+}
+
+// defineCurrentTheme(themeSytem)
+
+
+
+
 
 
 //slide de skils
