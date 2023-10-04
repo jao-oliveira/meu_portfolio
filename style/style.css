@@ -11,8 +11,8 @@
    --color-icons-1:#5797b5;
    --color-animation-border-1:#5ee2ff;
    --color-box-shadow-1:rgba(121, 121, 136, 0.2) 0px 3px 5px 0px;
-   --color-text-shadow: rgb(255, 255, 255) 0.1em 0.1em 0.3em;
-   --color-text-shadow-1: #5ee2ff 0.1em 0.1em 0.5em;
+   --color-text-shadow: #5ee2ff31 0.1em 0.1em 0.3em;
+   --color-text-shadow-1: #5ee2ff69 0.1em 0.1em 0.5em;
    --color-hover:#8383835b;
    --box-skil-backgroud:#ebecf0;
 }
@@ -216,6 +216,7 @@ span{
 /*icon*/
 .bi 
 {
+   transition: 0.5s;
   font-size: 18px;
 }
 
@@ -318,7 +319,7 @@ main{
  }
 
  .header-rigth{
-   background: radial-gradient( #5ee2ff83, #6ce4ff57,#0e0e0e00, #0e0e0e00);
+   background: radial-gradient( #5ee2ff4d, #6ce4ff38,#0e0e0e00, #ffffff00);
    position: relative;
 }
 
@@ -530,7 +531,7 @@ div .primeiro_skil{
 .box__skils svg{
    width: 80px;
    height: 80px;
-   fill: var(--color-icons-1);
+   fill: var(--color-logo);
 }
 
 
@@ -738,13 +739,23 @@ div .primeiro_skil{
 
 
 #icon-redes-insta{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
    scale: 1;
-   fill: var(--color-font-1);
+   color: var(--color-font-1);
+   font-size: 25px;
+   transition: 0.5s;
 }
 
-#icon-redes-insta:hover{
-   scale: 1;
-   fill: var(--color-icons-1);
+ #icon-redes-insta:hover{
+   scale: 1.2;
+} 
+
+ #icon-redes-insta:hover .bi-instagram {
+   
+   color: var(--color-icons-1);
 }
 
 /*roda pe*/
