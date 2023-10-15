@@ -54,35 +54,6 @@ function selectItem(index) {
 // faz slide passar automaticamente
 
 const galeria_skils =document.querySelector('.galeria')
-function nextItem(){
-
-  if(items[primeiroItem].classList.contains('primeiro_skil')){
-    items[primeiroItem].classList.remove('primeiro_skil')
-  }
-  console.log(primeiroItem)
-  primeiroItem++
-  
-  if(primeiroItem > items.length -1 ){
-    primeiroItem = 0
-  }
-
-  //corrigir erro do scroll descer sozinho
-  items[primeiroItem].scrollIntoView({
-    inline: 'center',
-    behavior: 'smooth',
-    block: 'nearest',
-  });
-
-  items[primeiroItem].classList.add('primeiro_skil')
-
-
-}
-
-setInterval(nextItem, 5000)
-
-
-
-
 
 
 
